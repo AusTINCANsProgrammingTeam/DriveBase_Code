@@ -33,6 +33,7 @@ public class Robot extends TimedRobot {
   Command m_autonomousCommand;
   SendableChooser<Command> m_chooser = new SendableChooser<>();
   private static DriveSubsystem driveSubsystem;
+  private static OI oi;
 
   /**
    * This function is run when the robot is first started up and should be
@@ -83,6 +84,10 @@ public class Robot extends TimedRobot {
     }
     throw new RuntimeException("DriveSubsystem has not yet been initialized");
 
+  }
+
+  public static OI getOI(){
+    return oi;
   }
 
   /**
